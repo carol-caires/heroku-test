@@ -1,0 +1,12 @@
+version: '2'
+services:
+  heroku-test:
+    container_name: heroku-test-run
+    build:
+            context: .
+            dockerfile: Dockerfile
+    ports: 
+        - "3031:3001"
+    volumes:
+      - ./src:/go/src/app
+    working_dir: /go/src/app
