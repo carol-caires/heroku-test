@@ -1,5 +1,7 @@
 package main
 import (
+  "os"
+  "fmt"
   "net/http"
   "github.com/labstack/echo/v4"
   "github.com/labstack/echo/v4/middleware"
@@ -16,7 +18,9 @@ func main() {
   e.GET("/", hello)
 
   // Start server
-  e.Logger.Fatal(e.Start(":3001"))
+  port := os.Getenv("PORT")
+  fmt.Println("PORT:", port)
+  e.Logger.Fatal(e.Start(fmt.Sprintf(":%s", port)))
 }
 
 // Handler
