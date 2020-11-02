@@ -1,7 +1,6 @@
 # heroku-test
-![enter image description here](https://github.com/egonelbre/gophers/blob/master/sketch/friends/hugging-docker.png | width=200)
 
-Just a Go *Hello World* service configured to run in Heroku trough Docker.
+A simple Go *Hello World* service configured to run in Heroku trough Docker.
 
 ## Running local
 ```
